@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c824e8cae3.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- left table -->
+        <div class="box1">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#home"><i class="fas fa-user-alt"></i> Profile</a>
+                <a href="#services"><i class="far fa-comment"></i> Chat</a>
+                <a href="#clients"><i class="fas fa-sliders-h"></i> Setting</a>
+            </div>
+            <div class="searchDesk">
+                <span class="openNav" onclick="openNav()">&#9776;</span>
+                <div class="search"><input type="search" placeholder="search"></div>
+            </div>
+
+            <div class="userContainer">
+                <img class="smallCircle" src="./images/phearum.jpg" alt="">
+                <div class="username">
+                    <p><strong>Phearum</strong></p>
+                </div>
+                <div class="messages">
+                    <p>message</p>
+                </div>
+            </div>
+
+            <div  class="userContainer">
+                <img class="smallCircle" src="./images/mesa.jpg" alt="">
+                <div class="username">
+                    <p><strong>Sokun Mesa</strong></p>
+                </div>
+                <div class="messages">
+                    <p>message</p>
+                </div>
+            </div>
+
+            <div class="userContainer">
+                <img class="smallCircle" src="./images/be david.jpg" alt="">
+                <div class="username">
+                    <p><strong>Be David</strong></p>
+                </div>
+                <div class="messages">
+                    <p>message</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="box2">
+            <div class="row1">
+                <div class="userDisplay">
+                    <p class="userN"><span>Phearum</span></p>
+                    <p class="messA">last seen on ???</p>
+                </div>
+            </div>
+            <div class="row2"></div>
+            <div class="row3">
+                <div class="inputForm">
+                        <input class="text-input" type="text" placeholder="type here">
+                        <div class="sentLogo"><i class="fas fa-paper-plane"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function changeBG() {
+            document.getElementById("userContainer").style.background = "#02684C";
+        }
+
+        $('.userContainer').on("click",function () {
+            $(this).toggleClass('clicked');
+        });
+    </script>
+</body>
+
+</html>
